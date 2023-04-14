@@ -4,40 +4,40 @@
 
 - **Monolithic Architecture** is a software architecture pattern where a single application is built as a single system. It is built as a single package and deployed on a single server or cluster of servers.
     - **Problems**: 
-        - Scalability - In a monolithic architecture, all components need to be scaled together, which can result in wasted resources and reduced performance
+        - Scalability: In a monolithic architecture, all components need to be scaled together, which can result in wasted resources and reduced performance
 
-        - Deployment time - longer deployment times and increased risk of downtime or errors during deployment
+        - Deployment time: longer deployment times and increased risk of downtime or errors during deployment
 
-        - Testing - When they grow in size and complexity, it can be difficult to isolate and test specific components without affecting the rest of the application
+        - Testing: When they grow in size and complexity, it can be difficult to isolate and test specific components without affecting the rest of the application
 
-        - Technology stack - In a monolithic architecture, all components are built using the same technology stack, which can limit flexibility and innovation
+        - Technology stack: In a monolithic architecture, all components are built using the same technology stack, which can limit flexibility and innovation
 
     - **Benefits**: 
-        - Simplicity - Monolithic architecture is relatively simple to implement and manage.
+        - Simplicity: Monolithic architecture is relatively simple to implement and manage.
 
-        - Familiarity - Many developers are familiar with monolithic architecture and have experience building applications using this approach
+        - Familiarity: Many developers are familiar with monolithic architecture and have experience building applications using this approach
 
-        - Performance - Monolithic applications can be highly performant, particularly if they are well-designed and optimized.
+        - Performance: Monolithic applications can be highly performant, particularly if they are well-designed and optimized.
 
-        - Maintainability - It can be easier to make changes or updates to the application without introducing new bugs or breaking existing functionality.
+        - Maintainability: It can be easier to make changes or updates to the application without introducing new bugs or breaking existing functionality.
         - Cost-effectiveness
 
 - **Microservices** are a software architecture pattern where an application is built as a set of small, independent services, each performing a single specific function. Each service can be developed, deployed, and scaled independently without impacting the other services
     - **Problems**: 
-        - Increased complexity - higher degree of complexity in terms of deployment, management, and testing
+        - Increased complexity: higher degree of complexity in terms of deployment, management, and testing
 
-        - Distributed systems management - services are often deployed across multiple servers or containers, which can make it difficult to manage and monitor the entire system
+        - Distributed systems management: services are often deployed across multiple servers or containers, which can make it difficult to manage and monitor the entire system
 
-        - Data consistency and integrity - data may be stored in multiple databases or data stores, which can make it difficult to ensure data consistency and integrity across the entire system
+        - Data consistency and integrity: data may be stored in multiple databases or data stores, which can make it difficult to ensure data consistency and integrity across the entire system
 
-        - Service availability and reliability - the overall system's availability and reliability can be affected if one of the services goes down
+        - Service availability and reliability: the overall system's availability and reliability can be affected if one of the services goes down
 
-        - Integration challenges - they may be written in different programming languages, use different data storage technologies, and have different communication protocols. This requires a robust integration strategy
+        - Integration challenges: they may be written in different programming languages, use different data storage technologies, and have different communication protocols. This requires a robust integration strategy
 
         - Cust
 
     - **Benefits**: 
-        - Technology stack - This allows development teams to work on independent services, with different technologies and at different paces.
+        - Technology stack: This allows development teams to work on independent services, with different technologies and at different paces.
 
         - It has greater flexibility, scalability and resiliency. 
 
@@ -171,4 +171,47 @@ _______________
 
 _______________
 
-## 
+## How to handle communication between different services in a microservices architecture?
+
+1. **Use a lightweight communication protocol**: RESTful APIs over HTTP or gRPC are commonly used for communication between microservices. 
+
+2.  **Implement API gateways**: An API gateway can act as a central point of entry for incoming requests and handle communication between microservices. It can also perform authentication, rate limiting, caching, and load balancing. EX:
+    - **Amazon API Gateway**
+    - **Google cloud endpoint**
+    - **Azure API Management service**
+    - **NGINX**
+
+3. **Use asynchronous communication**: In some cases, it might be more efficient to use asynchronous communication for long-running tasks or when one microservice doesn't need an immediate response from another microservice. EX:
+    - **RabbitMQ**
+    - **Apache Kafka**
+    - **Apache ActiveMQ**
+    - **Amazon Simple Queue Service (SQS)**
+    - **Azure Service Bus**
+    - **Google Cloud Pub/Sub**
+
+4. **Implement service discovery**: Service discovery is the process of dynamically locating and accessing the services that make up a distributed system. EX:
+    - **Consul**
+    - **Eureka**
+    - **ZooKeeper**
+    - **Kubernetes**
+    - **HashiCorp Nomad**
+
+5. **Use circuit breakers and retries**: In a distributed system, services can fail or become unavailable. Circuit breakers and retries can be used to handle these scenarios and ensure that requests are not lost.  EX: 
+    - **Istio**: of GCP
+    - **Hystrix** : of GCP
+    - **AWS Elastic Load Balancer (ELB)**: of AWS
+    - **Hystrix**: of AWS
+    - **Envoy**: of AWS
+    - **Azure Circuit Breaker**: of Azure
+    - **Polly**: of Azure - A .NET resilience and transient-fault-handling library
+    - 
+
+6. **Implement monitoring and logging**: Monitoring and logging are important for understanding the performance and behavior of a microservices architecture.  EX:
+    - **Prometheus**
+    - **Grafana**
+    - **Elasticsearch**
+    - **Logstash**
+    - **Kibana**
+    - **Fluentd**
+    - **Datadog**
+    - **New Relic**
