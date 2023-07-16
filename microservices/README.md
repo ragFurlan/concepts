@@ -39,6 +39,10 @@
     - **Benefits**: 
         - Technology stack: This allows development teams to work on independent services, with different technologies and at different paces.
 
+        - Agility
+
+        - Scalability of development teams
+
         - It has greater flexibility, scalability and resiliency. 
 
         - This makes scaling easier as only required services can be scaled instead of the entire application.
@@ -146,6 +150,8 @@ _______________
 
     - **Google Cloud Load Balancing**: A load balancing service managed by Google Cloud Platform (GCP). It distributes traffic between Google Compute Engine instances, Kubernetes containers, and other GCP services.
 
+    - **Azure Load Balancer**
+
 4. **Monitor performance**: It's important to monitor the performance of your microservices to ensure they are working correctly and catch issues before they affect end users.
 
 5. **Implement caches**: Using caches can help reduce the workload on your microservices by storing frequently accessed information in a location close to the end user. EX:
@@ -198,13 +204,13 @@ _______________
 
 5. **Use circuit breakers and retries**: In a distributed system, services can fail or become unavailable. Circuit breakers and retries can be used to handle these scenarios and ensure that requests are not lost.  EX: 
     - **Istio**: of GCP
-    - **Hystrix** : of GCP
+    - **Hystrix** : of GCP(deprecate)
     - **AWS Elastic Load Balancer (ELB)**: of AWS
-    - **Hystrix**: of AWS
+    - **Hystrix**: of AWS (deprecate)
     - **Envoy**: of AWS
     - **Azure Circuit Breaker**: of Azure
     - **Polly**: of Azure - A .NET resilience and transient-fault-handling library
-    - 
+
 
 6. **Implement monitoring and logging**: Monitoring and logging are important for understanding the performance and behavior of a microservices architecture.  EX:
     - **Prometheus**
