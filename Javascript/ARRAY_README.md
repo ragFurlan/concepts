@@ -1,4 +1,4 @@
-# Javascript
+# Array
 
 ## Examples of Working with Arrays in JavaScript
 
