@@ -2,9 +2,9 @@
 
 ## Promise
 
-```
+
 promises are used to handle asynchronous operations, such as fetching data from an API, reading files, or making database queries
-```
+
 
 Example of a resolved Promise:
 
