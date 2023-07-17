@@ -1,5 +1,19 @@
 # Javascript
 
+
+## Design Patterns
+
+For more details, see [here](./PATTERNS_README.md).
+
+## SOLID
+
+For more details, see [here](./SOLID_README.md).
+
+
+## Array
+
+For more details, see [here](./ARRAY_README.md).
+
 ## Promise
 
 
@@ -260,8 +274,6 @@ test('subtract function subtracts two numbers correctly', () => {
 ```
 
 
-
-
 ## Frameworks Javascript
 
 - React
@@ -272,5 +284,5 @@ test('subtract function subtracts two numbers correctly', () => {
 - VuePress
 - Nest.js
 
-## SOLID
+
 
