@@ -121,4 +121,4 @@ let indexOfGrape = fruits.indexOf('grape');
 console.log(indexOfGrape); // Output: -1 (not found)
 ```
 
-
+[**RETURN**](./README.md)

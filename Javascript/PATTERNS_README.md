@@ -198,3 +198,5 @@ async function getDataAsync() {
 
 getDataAsync();
 ```
+
+[**RETURN**](./README.md)
